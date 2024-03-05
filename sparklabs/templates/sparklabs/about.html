@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+
+    <!-- Box Icons -->
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    
+    {% block links %}  {% endblock %}
+    <!-- Custom CSS -->
+    {% block css %} 
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'sparklabs/css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header Design -->
+    <header class="header">
+      <span class="logo-span"> 
+        <img id="logo_image" src="{% static 'sparklabs/images/spark.png' %}" alt="Sparkline Labs">
+        <a href="/" class="logo">Sparkline Labs</a>
+      </span>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <!-- <img src="/images/menu-logo.png" id="menu-icon" class="" alt=""> -->
+
+      <nav class="navbar">
+        <a href="/" class="active">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/portfolio">portfolio</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+<!-- About Section Design -->
+<section class="about" id="about">
+  <div class="about-img">
+    <!-- <img src="{% static 'sparklabs/images/sparklinelabs.png' %}" alt="" /> -->
+  </div>
+  <div class="about-content">
+    <h2 class="heading">About <span>Us</span></h2>
+    <h3>Starline Labs: Launch, Grow, and Shine Online</h3><br>
+    <h4>Feeling lost in the online world?</h4>
+    <p style="margin-top: 0;">
+      We get it. Building a website, navigating marketing, and keeping up with
+      trends can be overwhelming.<br />
+      At Starline Labs, we're passionate about helping
+      <strong> startups and established businesses </strong> like yours
+      <strong> thrive online. </strong> We're your
+      <strong> partners in success </strong>, not just vendors <br />
+    </p>
+    <h4>Here's what we do:</h4>
+    <ul>
+      <li class="p-li">
+        <strong> Craft stunning, user-friendly websites </strong> that attract
+        new customers and keep them coming back.
+      </li>
+      <li class="p-li">
+        <strong> Develop strategic marketing campaigns </strong> that reach the
+        right audience and get you results.
+      </li>
+      <li class="p-li">
+        <strong> Boost your search engine ranking </strong> so you stand out
+        from the competition.
+      </li>
+    </ul>
+    <p>
+      <strong> We go beyond the surface. </strong> We take the time to
+      understand your unique business goals and develop personalized solutions
+      that fit your budget and needs.
+    </p>
+    <h4>Why choose Starline Labs?</h4>
+    <ul>
+      <li class="p-li">
+        <strong> We care about your success. </strong> We offer ongoing support
+        and guidance as you grow.
+      </li>
+      <li class="p-li">
+        <strong> We speak your language. </strong> We explain things in a clear,
+        easy-to-understand way.
+      </li>
+      <li class="p-li">
+        <strong> We're budget-friendly. </strong> We offer affordable solutions
+        that deliver real value.
+      </li>
+    </ul>
+    <br />
+    <h4>Ready to launch, grow, and shine online?</h4>
+    <p style="margin-top: 0">
+      Contact Starline Labs today for a free consultation and let's discuss your
+      goals! We're confident we can help you achieve lasting success in the
+      ever-evolving digital world.
+    </p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/sparkline.labs"<i class='bx bxl-facebook-circle'></i></a>
+      <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+      <a href="#"><i class='bx bxl-github' ></i></a>
+      <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+    </div>
+    <a href="contact" class="btn">Contact Us</a>
+  </div>
+</section>
+
+    <!-- Footer Design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>
+          Copyright &copy; www.sparklinelabs.com | All Rights Reserved.
+        </p>
+      </div>
+      <div class="footer-iconTop">
+        <!-- UP Arrow icon -->
+        <!-- <a href="#home" ><img src="{% static 'sparklabs/images/up-arrow-alt-regular-24.png' %}" alt=""/></a> -->
+      </div>
+    </footer>
+
+    {% block js %} 
+    
+    {% endblock %}
+    <!-- Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!--Scroll Reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Custom js-->
+    <script src="{% static 'sparklabs/js/script.js' %}"></script>
+  </body>
+</html>

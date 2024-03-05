@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+
+    <!-- Box Icons -->
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    
+    {% block links %}  {% endblock %}
+    <!-- Custom CSS -->
+    {% block css %} 
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'sparklabs/css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header Design -->
+    <header class="header">
+      <span class="logo-span"> 
+        <img id="logo_image" src="{% static 'sparklabs/images/spark.png' %}" alt="Sparkline Labs">
+        <a href="/" class="logo">Sparkline Labs</a>
+      </span>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <!-- <img src="/images/menu-logo.png" id="menu-icon" class="" alt=""> -->
+
+      <nav class="navbar">
+        <a href="/" class="active">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/portfolio">portfolio</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+<!-- Services Section Design -->
+<section class="services" id="services">
+  <h2 class="heading">Our <span>Services</span></h2>
+  <div class="services-container">
+    <div class="services-box">
+      <i class="bx bx-code-alt"></i>
+      <h3>Web Development</h3>
+      <p>
+        We design and develop user-friendly websites that not only look great
+        but also attract organic traffic. Our team leverages the latest
+        technologies for the front-end and back-end to build scalable solutions
+        that meet your unique needs.
+      </p>
+      <!-- <a href="#" class="btn">Read More</a> -->
+    </div>
+
+    <div class="services-box">
+      <i class="bx bx-bar-chart-alt"></i>
+      <h3>SEO Optimization</h3>
+      <p>
+        Dominate Search Results with Our Powerful SEO Services. Tired of waiting
+        for customers to find you online? Our comprehensive SEO services improve
+        your website's ranking on search engines, driving organic traffic,
+        leads, and sales.
+      </p>
+      <!-- <a href="#" class="btn">Read More</a> -->
+    </div>
+
+    <div class="services-box">
+      <i class="bx bxl-trip-advisor"></i>
+      <h3>Social Media Ads</h3>
+      <p>
+        Get seen by the right people with targeted social media ads. We help
+        businesses like yours reach new audiences, increase brand awareness, and
+        drive conversions with strategic social media ads campaigns. Contact us
+        today for a free consultation!
+      </p>
+      <!-- <a href="#" class="btn">Read More</a> -->
+    </div>
+  </div>
+</section>
+    <!-- Footer Design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>
+          Copyright &copy; www.sparklinelabs.com | All Rights Reserved.
+        </p>
+      </div>
+      <div class="footer-iconTop">
+        <!-- UP Arrow icon -->
+        <!-- <a href="#home" ><img src="{% static 'sparklabs/images/up-arrow-alt-regular-24.png' %}" alt=""/></a> -->
+      </div>
+    </footer>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!--Scroll Reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Custom js-->
+    <script src="{% static 'sparklabs/js/script.js' %}"></script>
+  </body>
+</html>

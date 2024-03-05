@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+
+    <!-- Box Icons -->
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    
+    {% block links %}  {% endblock %}
+    <!-- Custom CSS -->
+    {% block css %} 
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'sparklabs/css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header Design -->
+    <header class="header">
+      <span class="logo-span"> 
+        <img id="logo_image" src="{% static 'sparklabs/images/spark.png' %}" alt="Sparkline Labs">
+        <a href="/" class="logo">Sparkline Labs</a>
+      </span>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="/" class="active">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/portfolio">portfolio</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+<!-- Home Section Design -->
+<section class="home" id="home">
+  <div class="home-content">
+    <h3>Ready to spark your next project?</h3>
+    <h1>Sparkline Labs</h1>
+    <h3>Specializes in <span class="multiple-text"></span></h3>
+    <p>
+      Spark your startup's potential, or ignite your existing business online. Sparkline Labs offers cutting-edge tech solutions and lasting support to fuel your online presence and drive long-term success. Let's Chat!
+    </p>
+    <div class="social-media">
+      <a href="https://www.facebook.com/sparkline.labs"<i class='bx bxl-facebook-circle'></i></a>
+      <!-- <a href="#"><i class='bx bxl-instagram-alt' ></i></a> -->
+      <a href="https://github.com/mbachalabro"><i class='bx bxl-github' ></i></a>
+      <!-- <a href="#"><i class='bx bxl-linkedin-square' ></i></a> -->
+    </div>
+    <a href="portfolio" class="btn">Visit Projects</a>
+  </div>
+
+  <div class="home-img">
+    <img src="{% static 'sparklabs/images/sparklinelabs.png' %}" alt="" />
+  </div>
+</section>
+
+    <!-- Footer Design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>
+          Copyright &copy; www.sparklinelabs.com | All Rights Reserved.
+        </p>
+      </div>
+      <div class="footer-iconTop">
+        <!-- UP Arrow icon -->
+        <!-- <a href="#home" ><img src="{% static 'sparklabs/images/up-arrow-alt-regular-24.png' %}" alt=""/></a> -->
+      </div>
+    </footer>
+
+    {% block js %} 
+    
+    {% endblock %}
+    <!-- Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!--Scroll Reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Custom js-->
+    <script src="{% static 'sparklabs/js/script.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+
+    <!-- Box Icons -->
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    
+    {% block links %}  {% endblock %}
+    <!-- Custom CSS -->
+    {% block css %} 
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'sparklabs/css/style.css' %}" />
+  </head>
+  <body>
+    <!-- Header Design -->
+    <header class="header">
+      <span class="logo-span"> 
+        <img id="logo_image" src="{% static 'sparklabs/images/spark.png' %}" alt="Sparkline Labs">
+        <a href="/" class="logo">Sparkline Labs</a>
+      </span>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <!-- <img src="/images/menu-logo.png" id="menu-icon" class="" alt=""> -->
+
+      <nav class="navbar">
+        <a href="/" class="active">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/portfolio">portfolio</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+<!-- Portfolio Section Design -->
+<section class="portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+  
+    <div class="portfolio-container">
+      <!-- {% for p in pr %} -->
+      <div class="portfolio-box">
+        <img
+          class="project-img"
+          src="/media/{{p.project_image}}"
+          alt=""
+        />
+        <div class="portfolio-layer">
+          <h4>{{p.project_title}}</h4>
+          <p>
+            {{p.project_desc}}
+          </p>
+          <a href="{{p.project_link}}"
+            ><i class='bx bx-link-external'></i></a>
+        </div>
+      </div>
+      <!-- {% endfor %} -->
+    </div>
+  </section>
+    <!-- Footer Design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>
+          Copyright &copy; www.sparklinelabs.com | All Rights Reserved.
+        </p>
+      </div>
+      <div class="footer-iconTop">
+        <!-- UP Arrow icon -->
+        <!-- <a href="#home" ><img src="{% static 'sparklabs/images/up-arrow-alt-regular-24.png' %}" alt=""/></a> -->
+      </div>
+    </footer>
+
+    {% block js %} 
+    
+    {% endblock %}
+    <!-- Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!--Scroll Reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Custom js-->
+    <script src="{% static 'sparklabs/js/script.js' %}"></script>
+  </body>
+</html>
