@@ -45,11 +45,11 @@
     <h2 class="heading">Latest <span>Projects</span></h2>
   
     <div class="portfolio-container">
-      <!-- {% for p in pr %} -->
+      {% for p in pr %}
       <div class="portfolio-box">
         <img
           class="project-img"
-          src="/media/{{p.project_image}}"
+          src="/{{p.project_image}}"
           alt=""
         />
         <div class="portfolio-layer">
@@ -61,7 +61,7 @@
             ><i class='bx bx-link-external'></i></a>
         </div>
       </div>
-      <!-- {% endfor %} -->
+      {% endfor %}
     </div>
   </section>
     <!-- Footer Design -->
