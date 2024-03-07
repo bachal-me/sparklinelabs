@@ -9,23 +9,23 @@
     <h2 class="heading">Latest <span>Projects</span></h2>
   
     <div class="portfolio-container">
-      {% for p in pr %}
+      <!-- {% for p in pr %} -->
       <div class="portfolio-box">
         <img
           class="project-img"
-          src="/{{p.project_image}}"
+          src="{% static 'projects/images/Cara.png' %}"
           alt=""
         />
         <div class="portfolio-layer">
-          <h4>{{p.project_title}}</h4>
+          <h4>Cara E-Commerce</h4>
           <p>
-            {{p.project_desc}}
+            A complete UI of E-Commerce Website   
           </p>
-          <a href="{{p.project_link}}"
+          <a href="https://cara.ecommerce.vercel.app/"
             ><i class='bx bx-link-external'></i></a>
         </div>
       </div>
-      {% endfor %}
+      <!-- {% endfor %} -->
     </div>
   </section>    
 {% endblock %}
