@@ -12,7 +12,8 @@ def services(request):
 
 def portfolio(request):
     projects = Project.objects.all()
-    return render(request, 'sparklabs/portfolio.html', context={'pr':projects})
+    context={'pr':projects}
+    return render(request, 'sparklabs/portfolio.html', context)
 
 def contact(request):
     if request.method=="POST":

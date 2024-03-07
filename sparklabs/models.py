@@ -19,7 +19,7 @@ class Project(models.Model):
     project_link = models.CharField(max_length=100, default="")
     project_category = models.CharField(max_length=50, default="")
     pub_date = models.DateField()
-    project_image = models.ImageField(upload_to='media/images')
+    project_image = models.ImageField(upload_to='static/projects/images')
 
     def __str__(self):
         return self.project_title

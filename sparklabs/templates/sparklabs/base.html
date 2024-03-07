@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %} {% endblock %}</title>
+    <title>{% block title %} {% endblock %} | Sparkline Labs</title>
 
     <!-- Box Icons -->
     <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
@@ -23,7 +23,7 @@
     <!-- Header Design -->
     <header class="header">
       <span class="logo-span"> 
-        <img id="logo_image" src="{% static 'sparklabs/images/logo.webp' %}" alt="Sparkline Labs">
+        <img id="logo_image" src="{% static 'sparklabs/images/spark.webp' %}" alt="Sparkline Labs">
         <a href="/" class="logo">Sparkline Labs</a>
       </span>
 
@@ -32,13 +32,13 @@
 
       <nav class="navbar">
         <a href="/" class="active">Home</a>
-        <a href="/about">About</a>
-        <a href="/services">Services</a>
-        <a href="/portfolio">portfolio</a>
-        <a href="/contact">Contact</a>
+        <a href="/about/">About</a>
+        <a href="/services/">Services</a>
+        <a href="/portfolio/">portfolio</a>
+        <a href="/contact/">Contact</a>
       </nav>
     </header>
-    {% block body %} {% endblock %}
+    {% block content %} {% endblock %}
 
     <!-- Footer Design -->
     <footer class="footer">

@@ -1,44 +1,8 @@
+{% extends 'sparklabs/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Services</title>
-    <link rel="shortcut icon" type="image/png" href="{% static 'sparklabs/images/favicon.png' %}" >
-
-    <!-- Box Icons -->
-    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    
-    {% block links %}  {% endblock %}
-    <!-- Custom CSS -->
-    {% block css %} 
-    {% endblock %}
-    <link rel="stylesheet" href="{% static 'sparklabs/css/style.css' %}" />
-  </head>
-  <body>
-    <!-- Header Design -->
-    <header class="header">
-      <span class="logo-span"> 
-        <img id="logo_image" src="{% static 'sparklabs/images/logo.webp' %}" alt="Sparkline Labs">
-        <a href="/" class="logo">Sparkline Labs</a>
-      </span>
-
-      <i class="bx bx-menu" id="menu-icon"></i>
-      <!-- <img src="/images/menu-logo.webp" id="menu-icon" class="" alt=""> -->
-
-      <nav class="navbar">
-        <a href="/" class="active">Home</a>
-        <a href="/about/">About</a>
-        <a href="/services/">Services</a>
-        <a href="/portfolio/">portfolio</a>
-        <a href="/contact/">Contact</a>
-      </nav>
-    </header>
+{% block title %} Our Services {% endblock %}
+<!-- Home Section Design -->
+{% block content %}
 
 <!-- Services Section Design -->
 <section class="services" id="services">
@@ -81,25 +45,4 @@
     </div>
   </div>
 </section>
-    <!-- Footer Design -->
-    <footer class="footer">
-      <div class="footer-text">
-        <p>
-          Copyright &copy; www.sparklinelabs.com | All Rights Reserved.
-        </p>
-      </div>
-      <div class="footer-iconTop">
-        <!-- UP Arrow icon -->
-        <!-- <a href="#home" ><img src="{% static 'sparklabs/images/up-arrow-alt-regular-24.webp' %}" alt=""/></a> -->
-      </div>
-    </footer>
-
-    <!-- Icons -->
-    <!-- Typed js -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!--Scroll Reveal  -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!-- Custom js-->
-    <script src="{% static '/sparklabs/js/script.js' %}"></script>
-  </body>
-</html>
+{% endblock %}
