@@ -1,31 +1,27 @@
 {% extends 'sparklabs/base.html' %}
 {% load static %}
 {% block title %} Portfolio {% endblock %}
-<!-- Home Section Design -->
 {% block content %}
 
-<!-- Portfolio Section Design -->
 <section class="portfolio" id="portfolio">
     <h2 class="heading">Latest <span>Projects</span></h2>
   
     <div class="portfolio-container">
-      <!-- {% for p in pr %} -->
       <div class="portfolio-box">
         <img
           class="project-img"
-          src="{% static 'projects/images/Cara.png' %}"
+          src="{% static 'projects/images/carawear.png' %}"
           alt=""
         />
         <div class="portfolio-layer">
-          <h4>Cara E-Commerce</h4>
+          <h4>CaraWear</h4>
           <p>
-            A complete UI of E-Commerce Website   
+            CaraWear is wearing brand website made with html, css and js   
           </p>
-          <a href="https://cara.ecommerce.vercel.app/"
+          <a href="https://carawear.vercel.app/"
             ><i class='bx bx-link-external'></i></a>
         </div>
       </div>
-      <!-- {% endfor %} -->
     </div>
   </section>    
 {% endblock %}
